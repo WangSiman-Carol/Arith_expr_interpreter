@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Code reference: https://ruslanspivak.com/lsbasi-part7/
 
 import sys
@@ -12,7 +14,7 @@ def main():
                 parser = Parser(lexer)
                 interpreter = Interpreter(parser)
                 result = interpreter.interpret()
-                print(result)                
+                print(result, flush=True)              
     except OSError as err:
         print("OS error: {0}".format(err))
     except EOFError:
